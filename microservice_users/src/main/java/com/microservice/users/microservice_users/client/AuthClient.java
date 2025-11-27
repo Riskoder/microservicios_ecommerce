@@ -22,6 +22,6 @@ public interface AuthClient {
      * @param token Token JWT en formato "Bearer {token}"
      * @return Información del usuario autenticado (userId, email, rol)
      */
-    @PostMapping("/api/auth/validate")
+    @PostMapping("/v1/auth/validate")
     AuthUserInfo validateToken(@RequestHeader("Authorization") String token);
 }

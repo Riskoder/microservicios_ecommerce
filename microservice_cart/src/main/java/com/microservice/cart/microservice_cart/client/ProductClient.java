@@ -9,6 +9,6 @@ import com.microservice.cart.microservice_cart.dto.ProductExternalDto;
 @FeignClient(name = "microservice-products", url = "https://xd6w381w-8083.use2.devtunnels.ms")
 public interface ProductClient {
 
-    @GetMapping("/api/products/{id}")
+    @GetMapping("/v1/products/{id}")
     ProductExternalDto getProductById(@PathVariable("id") Long id);
 }
