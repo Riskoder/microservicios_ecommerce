@@ -17,7 +17,7 @@ import com.microservice.products.microservice_products.service.ProductService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/v1/products")
 @CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 @Tag(name = "Productos", description = "API para la gestión de productos y catálogo")

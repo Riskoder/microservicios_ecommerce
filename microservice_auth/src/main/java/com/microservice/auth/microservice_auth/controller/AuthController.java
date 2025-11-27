@@ -13,7 +13,7 @@ import com.microservice.auth.microservice_auth.dto.RegisterRequest;
 import com.microservice.auth.microservice_auth.service.AuthService;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/v1/auth")
 @CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class AuthController {

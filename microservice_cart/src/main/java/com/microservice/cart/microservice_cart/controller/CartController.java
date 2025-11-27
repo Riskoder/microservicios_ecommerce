@@ -12,7 +12,7 @@ import com.microservice.cart.microservice_cart.models.Cart;
 import com.microservice.cart.microservice_cart.service.CartService;
 
 @RestController
-@RequestMapping("/api/cart")
+@RequestMapping("/v1/cart")
 @CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 @Tag(name = "Carrito de Compras", description = "API para gestionar el carrito de compras de los usuarios")

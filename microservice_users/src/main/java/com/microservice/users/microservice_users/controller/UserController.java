@@ -14,7 +14,7 @@ import com.microservice.users.microservice_users.service.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/v1/users")
 @CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class UserController {
