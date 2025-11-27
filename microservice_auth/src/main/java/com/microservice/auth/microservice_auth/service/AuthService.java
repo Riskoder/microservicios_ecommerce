@@ -107,9 +107,12 @@ public class AuthService {
             Long userId = jwtUtil.extractUserId(token);
             String rol = jwtUtil.extractRol(token);
 
-            // Verificar que el usuario existe
             User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+            .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+            // Verificar que el usuario existe
+            if (!user.getId().equals(userId)) {
+                throw new RuntimeException("Token inválido: el usuario no coincide");
+            }
 
             // Validar el token
             if (!jwtUtil.validateToken(token, email)) {

@@ -36,7 +36,7 @@ public class DataInitializer {
                 user.setRol("user");
                 userRepository.save(user);
 
-                System.out.println("✅ Usuarios iniciales creados:");
+                System.out.println("   Usuarios iniciales creados:");
                 System.out.println("   Admin: admin@stylepoint.com / Admin123!");
                 System.out.println("   User:  user@stylepoint.com / User123!");
             }
