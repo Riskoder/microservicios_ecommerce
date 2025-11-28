@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-// ===== USER LIST DTO (para lista de usuarios - solo id, nombre, rol) =====
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

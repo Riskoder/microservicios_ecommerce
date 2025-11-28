@@ -43,22 +43,20 @@ public class AuthController {
     }
 
     /**
-     * ✅ ENDPOINT ACTUALIZADO: Ahora retorna AuthUserInfo
-     * Este endpoint es llamado por el microservicio Users vía OpenFeign
+     * Este endpoint es llamado por el microservicio Users OpenFeign
      */
     @PostMapping("/validate")
     public ResponseEntity<?> validateToken(@RequestHeader("Authorization") String authHeader) {
         try {
-            // Verificar que el header Authorization existe y tiene formato correcto
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
                 return ResponseEntity.badRequest()
                     .body(new ErrorResponse("Token no proporcionado", HttpStatus.BAD_REQUEST.value()));
             }
 
-            // Extraer el token (quitar "Bearer ")
+            // Extraer el token 
             String token = authHeader.substring(7);
 
-            // Validar token y obtener información del usuario
+            // Validar token y información del usuario
             AuthUserInfo userInfo = authService.validateToken(token);
 
             // Retornar información del usuario autenticado

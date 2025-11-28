@@ -10,10 +10,7 @@ import javax.crypto.SecretKey;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
-/**
- * Servicio para validar y extraer información de tokens JWT
- * Este servicio permite al microservicio de Users validar tokens sin depender de Auth
- */
+
 @Service
 public class JwtService {
 

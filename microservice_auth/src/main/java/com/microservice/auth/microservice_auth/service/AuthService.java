@@ -54,7 +54,7 @@ public class AuthService {
         user.setNombre(request.getNombre());
         user.setEmail(request.getEmail().toLowerCase());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
-        user.setRol("user"); // Por defecto es usuario normal
+        user.setRol("user");
 
         User savedUser = userRepository.save(user);
 
@@ -102,7 +102,7 @@ public class AuthService {
 
     public AuthUserInfo validateToken(String token) {
         try {
-            // Extraer información del token
+            // Extraer info del token
             String email = jwtUtil.extractEmail(token);
             Long userId = jwtUtil.extractUserId(token);
             String rol = jwtUtil.extractRol(token);
@@ -119,7 +119,7 @@ public class AuthService {
                 throw new RuntimeException("Token inválido o expirado");
             }
 
-            // Retornar información del usuario
+            // Retornar info del usuario
             return new AuthUserInfo(userId, email, rol);
         } catch (Exception e) {
             throw new RuntimeException("Token inválido: " + e.getMessage());

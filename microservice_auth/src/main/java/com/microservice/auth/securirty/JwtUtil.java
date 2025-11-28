@@ -72,7 +72,7 @@ public class JwtUtil {
         return extractAllClaims(token).getExpiration();
     }
 
-    // Extraer todos los claims del token - Actualizado para jjwt 0.12.6
+    // Extraer del token 
     private Claims extractAllClaims(String token) {
         try {
             return Jwts.parser()

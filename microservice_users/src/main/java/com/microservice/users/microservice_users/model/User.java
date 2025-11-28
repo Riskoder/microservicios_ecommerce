@@ -29,7 +29,6 @@ public class User {
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
-    // NO incluimos password aquí porque es responsabilidad del microservicio de Auth
     
     @PrePersist
     protected void onCreate() {
